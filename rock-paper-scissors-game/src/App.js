@@ -1,10 +1,14 @@
+import HandButton from './HandButton';
 
-import Handlcon from "./Handlcon";
 function App() {
-
+  const handleClick = (value) => console.log(value);
   return (
     <div>
-      <Handlcon />
-    </div>);
+      <HandButton value="rock" onClick={handleClick} />
+      <HandButton value="scissor" onClick={handleClick} />
+      <HandButton value="paper" onClick={handleClick} />
+    </div>
+  );
 }
+
 export default App;

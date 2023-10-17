@@ -1,7 +1,16 @@
 import rock from "./assets/rock.svg";
+import scissor from "./assets/scissor.svg";
+import paper from "./assets/paper.svg";
 
-function Handlcon() {
-  return <img src={rock} alt="바위" />;
+
+const IMAGES ={
+  rock,
+  scissor,
+  paper
+}
+function Handlcon({value}) {
+  const src = IMAGES[value];
+  return <img src={src} alt= {value} />;
 }
 
 export default Handlcon;
