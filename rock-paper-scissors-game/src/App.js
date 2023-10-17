@@ -1,6 +1,10 @@
-function App() {
-  const img = {}
-  return <div>여기에 HandIcon을 배치해주세요</div>;
-}
 
+import Handlcon from "./Handlcon";
+function App() {
+
+  return (
+    <div>
+      <Handlcon />
+    </div>);
+}
 export default App;
