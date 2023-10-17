@@ -1,10 +1,11 @@
-import Handlcon from "./Handlcon";
+import HandIcon from "./HandIcon";
 
 function HandButton({ value, onClick }) {
+
   const handleClick = () => onClick(value);
   return (
   <button onClick = {handleClick}>
-    <Handlcon value ={value}/>
+    <HandIcon value ={value}/>
 
   </button>)
 }

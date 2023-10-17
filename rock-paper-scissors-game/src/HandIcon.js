@@ -8,9 +8,9 @@ const IMAGES ={
   scissor,
   paper
 }
-function Handlcon({value}) {
+function HandIcon({value}) {
   const src = IMAGES[value];
   return <img src={src} alt= {value} />;
 }
 
-export default Handlcon;
+export default HandIcon;
