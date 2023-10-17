@@ -25,8 +25,8 @@ function App() {
   };
 
   const handleClearClick = () => {
-    setHand({INITIAL_VALUE});
-    setOtherHand({INITIAL_VALUE});
+    setHand(INITIAL_VALUE);
+    setOtherHand(INITIAL_VALUE);
   };
 
   return (
