@@ -3,7 +3,7 @@ import Button from './Button';
 import HandButton from './HandButton';
 import HandIcon from './HandIcon';
 import { compareHand, generateRandomHand } from './utils';
-
+import "./App.css";
 const INITIAL_VALUE = 'rock';
 
 function getResult(me, other) {
@@ -48,29 +48,40 @@ function App() {
     num = Math.floor(num);
     setBet(num);
   };
-  
+
 
   return (
-    <div>
-      <Button onClick={handleClearClick}>처음부터</Button>
+
+    <div className='App'>
+      <h1 class="App-heading">가위바위보</h1>
       <div>
-        {score} : {otherScore}
-      </div>
-      <div>
-        <HandIcon value={hand} />
-        VS
-        <HandIcon value={otherHand} />
-      </div>
-      <div>
-        <input type="number" onChange={handleBetChange} value={bet} min={1} max={9}></input>
-      </div>
-      <p>승부 기록: {gameHistory.join(', ')}</p>
-      <div>
+        <Button onClick={handleClearClick}>처음부터</Button>
+        <div>
+          {score} : {otherScore}
+        </div>
+        <div class="Box App-box">
+          <div className='App-hands'>
+            <div class="Hand">
+              <HandIcon className="Hand-icon" value={hand} />
+            </div>
+            <div class="App-versus">VS</div>
+            <div class="Hand">
+              <HandIcon className="Hand-icon" value={otherHand} />
+            </div>
+          </div>
+          <div class="App-bet">
+            <span>배점</span><input type="number" onChange={handleBetChange} value={bet} min={1} max={9}></input>
+          </div>
+          <div class="App-history">
+            <p>승부 기록: {gameHistory.join(', ')}</p>
+          </div>
+        </div>
         <HandButton value="rock" onClick={handleButtonClick} />
         <HandButton value="scissor" onClick={handleButtonClick} />
         <HandButton value="paper" onClick={handleButtonClick} />
       </div>
     </div>
+
   );
 }
 

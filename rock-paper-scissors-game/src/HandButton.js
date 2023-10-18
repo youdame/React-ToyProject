@@ -1,5 +1,4 @@
 import HandIcon from "./HandIcon";
-import purple from "./assets/purple.svg";
 import './HandButton.css'
 
 
